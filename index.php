@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="FR">
   <head>
+    <!-- font awesome -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,26 +36,28 @@
 
     <!-- TU CODE ICI -->
     <?php
+    include("array.php");
+     ?>
+
+    <?php
     include("header.php");
      ?>
 
-     <?php
-     include("array.php");
-      ?>
 
  <div class="container">
    <div class="row">
 <?php
 foreach ($dogs as $key => $value) {
 ?>
- <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 20rem;">
+<form class=" card col-sm-12 col-md-4 col-lg-4" action="descriptif.php" style="width: 20rem;" method="post">
    <img class="card-img-top" src="<?php echo $value["img"];?> " alt="Card image cap">
    <div class="card-block">
      <h4 class="card-title"><?php echo $value["nom"];?></h4>
      <p class="card-text"><?php echo $value["description"];?></p>
-     <a href="#" class="btn btn-custom">Voir plus</a>
+     <input type="hidden" name="test" value="<?php echo $key;?>">
+     <input type="submit" class="btn btn-custom" value="Voir plus"></input>
    </div>
- </div>
+ </form>
 <?php
 }
  ?>
