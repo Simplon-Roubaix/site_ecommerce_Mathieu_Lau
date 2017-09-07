@@ -6,10 +6,11 @@
   </head>
   <body>
     <footer>
-      Contact
-      Nom
+      <p class="">  Contact
+     Nom
       Adresse
       RS
+      </p>
     </footer>
   </body>
 </html>
