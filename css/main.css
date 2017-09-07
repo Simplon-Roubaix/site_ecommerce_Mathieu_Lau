@@ -94,9 +94,41 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+header {
+  background-color: #D8C9AD;
+  color :#59514A;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+}
 
 
+body {
+  background-color: #A5947F;
+  padding: 0;
+  margin: 0;
+}
 
+footer {
+  background-color: #59514A;
+  height: 200px;
+}
+
+.card img{
+height : 400px;
+}
+
+.btn-custom {
+  background-color: #59514A;
+  color: #ffffff;
+}
+
+.btn-custom:hover{
+  background-color: #D8C9AD;
+  color: #ffffff;
+}
 
 
 
