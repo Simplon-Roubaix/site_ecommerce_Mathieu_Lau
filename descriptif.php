@@ -6,16 +6,18 @@
   </head>
   <body>
     <?php
+    require 'array.php';
     include('header.php');
      ?>
     <?php
     $vartest= $_POST["test"];
-    require 'array.php';
+
     $ok= $dogs[$vartest];
     $img1 = $ok["img"];
      ?>
-     <img src="<?php echo $img1?>" alt="">
-
+     <img class="imgdesc" src="<?php echo $img1?>" alt="">
+    <h2><?php echo $ok["nom"]?></h2>
+    <p><?php echo $ok["file"]?></p>
      <?php
      include('footer.php');
       ?>
