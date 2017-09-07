@@ -49,7 +49,7 @@
 <?php
 foreach ($dogs as $key => $value) {
 ?>
-<form class=" card col-sm-12 col-md-4 col-lg-4" action="descriptif.php" style="width: 20rem;" method="post">
+<form class="card col-sm-12 col-md-4 col-lg-4" action="descriptif.php" style="width: 20rem;" method="post">
    <img class="card-img-top" src="<?php echo $value["img"];?> " alt="Card image cap">
    <div class="card-block">
      <h4 class="card-title"><?php echo $value["nom"];?></h4>
