@@ -116,6 +116,19 @@ footer {
   height: 200px;
 }
 
+.card img{
+height : 400px;
+}
+
+.btn-custom {
+  background-color: #59514A;
+  color: #ffffff;
+}
+
+.btn-custom:hover{
+  background-color: #D8C9AD;
+  color: #ffffff;
+}
 
 
 
