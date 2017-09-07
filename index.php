@@ -34,12 +34,13 @@
 
     <!-- TU CODE ICI -->
     <?php
+    include("array.php");
+     ?>
+     
+    <?php
     include("header.php");
      ?>
 
-     <?php
-     include("array.php");
-      ?>
 
  <div class="container">
    <div class="row">

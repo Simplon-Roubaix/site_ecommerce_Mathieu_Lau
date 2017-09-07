@@ -19,4 +19,6 @@ $dogs = array (
   array ("img"=>"img/puppy.jpg", "nom"=>"Raoul","description" =>$text , "file"=> $text_long),
   array ("img"=>"img/shiba.jpg", "nom"=>"Okapi","description" =>$text , "file"=> $text_long),
 );
+
+$infos = array ("titre"=>"Adopte un chien", "sous-titre"=>"This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.", "auteur"=>"LAU & MATH")
  ?>
