@@ -28,5 +28,7 @@
 
   <body>
     <header>
-      <h1>Cute dogs</h1>
+        <h1 class="display-3 text-center">Adopte un chien</h1>
+        <p class="lead text-center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
     </header>
