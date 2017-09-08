@@ -111,11 +111,6 @@ body {
   margin: 0;
 }
 
-footer {
-  background-color: #a6987e;
-  height: 200px;
-}
-
 .row{
   display: flex;
   justify-content: space-around;
@@ -142,6 +137,8 @@ height : 400px;
 }
 
 footer {
+  background-color: #D8C9AD;
+  height: 200px;
   color:#ffffff;
   font-weight: bold;
   margin-top: 10px;
