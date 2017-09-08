@@ -96,7 +96,7 @@ textarea {
    ========================================================================== */
 header {
   background-color: #D8C9AD;
-  color :#59514A;
+  color :#000000;
 }
 
 h1{
@@ -112,8 +112,14 @@ body {
 }
 
 footer {
-  background-color: #59514A;
+  background-color: #a6987e;
   height: 200px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
 }
 
 .card img{
@@ -135,7 +141,16 @@ height : 400px;
   height: 200px;
 }
 
+footer {
+  color:#ffffff;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
 
+i{
+  color: #ffffff;
+}
 
 
 
