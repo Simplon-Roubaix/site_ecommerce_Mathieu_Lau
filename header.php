@@ -27,11 +27,10 @@
   </head>
 
   <body>
-    <header>
+    <header class="header-color">
       <?php
 
        ?>
         <h1 class="display-3 text-center"><?php echo $infos["titre"]; ?></h1>
         <p class="lead text-center"><?php echo $infos["sous-titre"]; ?></p>
-        <hr class="my-4">
     </header>

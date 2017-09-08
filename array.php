@@ -20,5 +20,5 @@ $dogs = array (
   array ("img"=>"img/shiba.png", "nom"=>"Okapi","description" =>$text , "file"=> $text_long),
 );
 
-$infos = array ("titre"=>"Adopte un chien", "sous-titre"=>"This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.", "auteur"=>"LAU & MATH", "adresse"=>"01 rue du chien <br> Aukland" , )
+$infos = array ("titre"=>"Adopte un chien", "sous-titre"=>"This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.", "auteur"=>"LAU & MATH", "adresse"=>"01 rue du chien <br> Auckland" , )
  ?>
