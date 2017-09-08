@@ -118,16 +118,19 @@ body {
 }
 
 footer  {
-  background-color: #a6987e;
-  height: 200px;
+  background-color: #D8C9AD;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-weight: bold;
+  margin-top: 100px;
 }
 
 footer p {
   margin: 0;
+  color: black;
 }
 
 .row{
@@ -155,15 +158,9 @@ height : 400px;
   height: 200px;
 }
 
-footer {
-  color:#ffffff;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-}
 
 i{
-  color: #ffffff;
+  color: black;
 }
 
 
