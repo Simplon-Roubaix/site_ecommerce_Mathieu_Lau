@@ -11,7 +11,7 @@
     include('header.php');
      ?>
     <?php
-    $vartest= $_POST["test"];
+    $vartest= $_GET["test"];
 
     $ok= $dogs[$vartest];
     $img1 = $ok["img"];
@@ -22,9 +22,7 @@
          <div class="row">
           <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
            <img class="img img-thumbnail" src="<?php echo $img1?>" alt="dog">
-          <form class="" action="index.php" method="post">
-            <input type="submit" name="" value="Retour" class="btn btn-custom">
-          </form>
+            <a href="index.php">Retour</a>
          </article>
          <article class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <h2><?php echo $ok["nom"]?></h2>
