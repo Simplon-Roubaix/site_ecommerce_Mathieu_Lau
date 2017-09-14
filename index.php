@@ -35,9 +35,6 @@
     <![endif]-->
 
     <!-- TU CODE ICI -->
-    <?php
-    include("array.php");
-     ?>
 
     <?php
     include("header.php");
@@ -45,23 +42,27 @@
 
 
  <div class="container">
-   <div class="row">
-<?php
-foreach ($dogs as $key => $value) {
-?>
-<form class="card col-sm-12 col-md-4 col-lg-4" action="descriptif.php" style="width: 20rem;" method="post">
-   <img class="card-img-top" src="<?php echo $value["img"];?> " alt="Card image cap">
-   <div class="card-block">
-     <h4 class="card-title"><?php echo $value["nom"];?></h4>
-     <p class="card-text"><?php echo $value["description"];?></p>
-     <a href="descriptif.php?test=<?php echo $key;?>">Voir plus</a>
-   </div>
- </form>
-<?php
-}
- ?>
+   <div class="row d-flex justify-content-around">
+     <!-- test -->
+     <?php $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+     $reponse = $bdd->query('SELECT * FROM image i INNER JOIN articles a ON a.id_img = i.id');
+     while ($donnees = $reponse->fetch())
+     {?>
+       <form class="card my-4" action="descriptif.php" style="width: 20rem;" method="post">
+          <img class="card-img-top" src="img/<?php echo $donnees["nom_img"];?><?php echo $donnees["type"];?> " alt="<?php echo $donnees["alt"];?>">
+          <div class="card-block">
+            <h4 class="card-title"><?php echo $donnees["nom"];?></h4>
+            <p class="card-text"><?php echo $donnees["description"];?></p>
+            <input type="hidden" name="test" value="<?php echo $donnees["id"];?>">
+            <input type="submit" class="btn btn-custom" value="Voir plus"></input>
+          </div>
+        </form>
+     <?php
+     }
+     ?>
 </div>
 </div>
+
      <?php
     include("footer.php");
     ?>

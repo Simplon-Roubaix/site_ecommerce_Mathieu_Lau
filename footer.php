@@ -6,9 +6,18 @@
   </head>
   <body>
     <footer>
-      <p class="text-center"><?php echo $infos["titre"]; ?></p>
-      <p class="text-center"><?php echo $infos["auteur"]; ?></p>
-      <p class="text-center"><?php echo $infos["adresse"]; ?></p>
+
+      <?php $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+      $reponse = $bdd->query('SELECT * FROM infos');
+      while ($donnees = $reponse->fetch())
+      {?>
+        <p class="text-center"><?php echo $donnees["titre"]; ?></p>
+        <p class="text-center"><?php echo $donnees["auteur"]; ?></p>
+        <p class="text-center"><?php echo $donnees["adresse"]; ?></p>
+        <p class="text-center"><?php echo $donnees["ville"]; ?></p>
+      <?php
+      }
+      ?>
       <p>
       <a href="#"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
       <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
