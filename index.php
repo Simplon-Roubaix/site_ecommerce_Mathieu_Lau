@@ -54,8 +54,7 @@ foreach ($dogs as $key => $value) {
    <div class="card-block">
      <h4 class="card-title"><?php echo $value["nom"];?></h4>
      <p class="card-text"><?php echo $value["description"];?></p>
-     <input type="hidden" name="test" value="<?php echo $key;?>">
-     <input type="submit" class="btn btn-custom" value="Voir plus"></input>
+     <a href="descriptif.php?test=<?php echo $key;?>">Voir plus</a>
    </div>
  </form>
 <?php
