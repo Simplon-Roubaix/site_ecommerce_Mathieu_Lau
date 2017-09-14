@@ -28,9 +28,14 @@
 
   <body>
     <header class="header-color">
+      <?php $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+      $reponse = $bdd->query('SELECT * FROM infos');
+      while ($donnees = $reponse->fetch())
+      {?>
+        <h1 class="display-3 text-center"><?php echo $donnees["titre"]; ?></h1>
+        <p class="lead text-center"><?php echo $donnees["sous_titre"]; ?></p>
       <?php
+      }
+      ?>
 
-       ?>
-        <h1 class="display-3 text-center"><?php echo $infos["titre"]; ?></h1>
-        <p class="lead text-center"><?php echo $infos["sous-titre"]; ?></p>
     </header>
