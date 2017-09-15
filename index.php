@@ -44,7 +44,7 @@
  <div class="container">
    <div class="row d-flex justify-content-around">
      <!-- test -->
-     <?php $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+     <?php $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
      $reponse = $bdd->query('SELECT * FROM image i INNER JOIN articles a ON a.id_img = i.id');
      while ($donnees = $reponse->fetch())
      {?>
