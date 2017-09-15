@@ -7,7 +7,7 @@
   <body>
     <footer>
 
-      <?php $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+      <?php $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
       $reponse = $bdd->query('SELECT * FROM infos');
       while ($donnees = $reponse->fetch())
       {?>
