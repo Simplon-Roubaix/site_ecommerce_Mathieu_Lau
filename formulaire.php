@@ -10,15 +10,25 @@
     include('header.php');
      ?>
 <?php $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
+// $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
 
 ?>
 
 <div class="container">
 <h1 class="text-center">Ajouter un article</h1>
-<form class="" action="uploadImage" method="post">
+<form enctype="multipart/form-data" class="" action="formulaire_post.php" method="post">
   <p>Insérer une image</p>
-  <input type="file" name="" value="">
+  <!-- <input type="hidden" name="max_file_size" value=""> -->
+  <input type="file" name="img" value="">
+  <input type="submit" name="" value="Envoyer">
 </form>
+
+
+
+
+
+
+
 <form class="" action="formulaire_post.php" method="post">
 <input type="text" name="nom" value="" placeholder="nom">
 <input type="text" name="id_img" value=""><br>
