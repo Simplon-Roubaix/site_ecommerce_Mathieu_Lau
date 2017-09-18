@@ -12,9 +12,9 @@
     <?php
     $vartest= $_POST["test"];
      ?>
-     <?php $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
-     // $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
-     
+     <?php
+     include('bdd.php');
+
      $reponse = $bdd->prepare('SELECT * FROM image i INNER JOIN articles a ON a.id_img = i.id and a.id = ?');
      $reponse->execute(array($vartest));
      while ($donnees = $reponse->fetch())
@@ -23,7 +23,7 @@
        <div class="container">
          <div class="row">
           <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <img class="img img-thumbnail" src="img/<?php echo $donnees["nom_img"];?><?php echo $donnees["type"];?> " alt="<?php echo $donnees["alt"];?>">
+            <img class="img img-thumbnail" src="img/<?php echo $donnees["nom_img"];?>">
           <form class="" action="index.php" method="post">
             <input type="submit" name="" value="Retour" class="btn btn-custom">
           </form>
