@@ -1,8 +1,21 @@
-<!-- <?php
-// $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
-$bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+<?php
+require('header.php');
+include('bdd.php');
+include('upload_img.php');
 
 
-  $req = $bdd->prepare('INSERT INTO articles SET id_img=?, nom=?, description=?, grosse_description=?');
-  $req->execute([$_POST['id_img'], $_POST['nom'],$_POST['description'], $_POST['grosse_description']]);
-?> -->
+$reponse=$bdd->query('SELECT MAX(id) as img_id FROM image');
+$donnees=$reponse->fetch();
+
+// if (empty($_POST['nom']) AND empty($_POST['description']) AND empty($_POST['grosse_description'])){
+  // header('Location: formulaire.php');
+  // echo 'Veuillez remplir tous les champs';
+// } else{
+
+  $req = $bdd->prepare('INSERT INTO articles SET id_img=?, nom=?, description=?, grosse_description=? ');
+  $req->execute([$donnees['img_id'],$_POST['nom'],$_POST['description'], $_POST['grosse_description']]);
+    header('Location: index.php');
+    // echo 'ok';
+  // }
+
+?>
