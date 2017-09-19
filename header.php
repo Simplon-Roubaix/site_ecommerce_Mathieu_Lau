@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+ ?>
 <!doctype html>
 <html class="no-js" lang="FR">
   <head>
@@ -28,10 +32,24 @@
 
   <body>
     <header class="header-color">
-       <?php
-      //  $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
-      $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+      <?php
+      include('bdd.php');
 
+if(isset($_SESSION['pseudo'])){
+  echo '<form action="deconnexion.php" method="POST">';
+  echo '<input type="submit" value="Deconnexion">';
+  echo '</form>';
+}
+else{
+  echo '<form action="connexion.php" method="POST">';
+  echo '<input type="submit" value="Connexion">';
+  echo '</form>';
+}
+?>
+<!-- <form class="" action="deconnexion.php" method="post">
+  <input type="submit" name="" value="">
+</form> -->
+<?php
       $reponse = $bdd->query('SELECT * FROM infos');
       while ($donnees = $reponse->fetch())
       {?>
@@ -40,5 +58,7 @@
       <?php
       }
       ?>
-      
     </header>
+    <?php
+    ob_end_flush();
+     ?>

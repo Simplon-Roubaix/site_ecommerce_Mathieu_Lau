@@ -1,3 +1,6 @@
+<?php
+ob_start();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,32 +13,18 @@
     include('header.php');
      ?>
 <?php
- // $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'gj7b!17LA');
-$bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
-
+include('bdd.php');
+echo 'Bonjour '.$_SESSION['pseudo'];
 ?>
 
 <div class="container">
 <h1 class="text-center">Ajouter un article</h1>
+
 <form enctype="multipart/form-data" class="" action="formulaire_post.php" method="post">
-  <p>Insérer une image</p>
-  <!-- <input type="hidden" name="max_file_size" value=""> -->
-  <input type="file" name="img" value="">
-  <input type="submit" name="" value="Envoyer">
-</form>
-
-
-
-
-
-
-
-<form class="" action="formulaire_post.php" method="post">
-<input type="text" name="nom" value="" placeholder="nom">
-<input type="text" name="id_img" value=""><br>
-<!-- <input type="file" name="image" value=""><br> -->
-<input type="text" name="description" value="" placeholder="courte description"><br>
-<input type="text" name="grosse_description" value="" placeholder="description">
+<input type="file" name="img" value="parcourir">
+<input type="text" name="nom" value="" placeholder="nom" required="required"><br>
+<input type="text" name="description" value="" placeholder="courte description" required="required"><br>
+<input type="text" name="grosse_description" value="" placeholder="description" required="required"><br>
 <input type="submit" name="publier" value="publier">
 </form>
 </div>
