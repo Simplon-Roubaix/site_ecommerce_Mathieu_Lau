@@ -7,9 +7,9 @@ ob_start();
 include('bdd.php');
 
 $req=$bdd->prepare('SELECT * FROM Connexion WHERE password=:password and pseudo=:pseudo');
-$password=$_POST['password'];
+$pass=$_POST['password'];
 $pseudo=$_POST['pseudo'];
-// $password=sha1($pass);
+$password=sha1($pass);
 
 $req->execute(array(
   'password'=>$password,
