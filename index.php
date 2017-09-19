@@ -38,8 +38,12 @@
 
     <?php
     include("header.php");
+    if(isset($_SESSION['pseudo'])){
+      echo '<form action="formulaire.php" method="POST">';
+      echo '<input type="submit" value="Publier un article">';
+      echo '</form>';
+    }
      ?>
-
 
  <div class="container">
    <div class="row d-flex justify-content-around">
