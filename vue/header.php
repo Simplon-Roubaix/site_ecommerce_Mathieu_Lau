@@ -1,7 +1,3 @@
-<?php
-ob_start();
-session_start();
- ?>
 <!doctype html>
 <html class="no-js" lang="FR">
   <head>
@@ -14,8 +10,8 @@ session_start();
     <title></title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -25,8 +21,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
 
@@ -53,6 +49,3 @@ else{
       }
       ?>
     </header>
-    <?php
-    ob_end_flush();
-     ?>

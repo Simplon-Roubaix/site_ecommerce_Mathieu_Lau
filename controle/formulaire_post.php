@@ -1,6 +1,6 @@
 <?php
-ob_start();
 session_start();
+
 include('../modele/data.php');
 include('upload_img.php');
 $donnees=max_id_img();
@@ -15,5 +15,4 @@ envoie_article($donnees,$_POST);
 include'index.php'
     // echo 'ok';
   // }
-ob_end_flush();
 ?>

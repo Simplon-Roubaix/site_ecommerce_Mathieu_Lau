@@ -4,7 +4,6 @@
 $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
 function get_infos(){
   $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
-
   $reponse = $bdd->query('SELECT * FROM infos');
   return $reponse->fetch();
 }
@@ -33,16 +32,15 @@ function envoie_enregistrement($pseudo, $password){
      ));
 }
 
-function comparaison_mdp($membres){
+function comparaison_mdp($password, $pseudo){
   $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
 
 $req=$bdd->prepare('SELECT * FROM Connexion WHERE password=:password and pseudo=:pseudo');
 $req->execute(array(
-  'password'=>$membres['password'],
-  'pseudo'=>$membres['pseudo']
+  'password'=>$password,
+  'pseudo'=>$pseudo
 ));
-$donnees=$req->fetch();
-return $donnees;
+return $req->fetch();
 }
 
 function max_id_img(){
