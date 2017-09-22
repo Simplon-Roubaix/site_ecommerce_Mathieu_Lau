@@ -8,10 +8,8 @@
     <footer>
 
       <?php
-      include('bdd.php');
-
-      $reponse = $bdd->query('SELECT * FROM infos');
-      while ($donnees = $reponse->fetch())
+      // $reponse = $bdd->query('SELECT * FROM infos');
+      // while ($donnees = $reponse->fetch())
       {?>
         <p class="text-center"><?php echo $donnees["titre"]; ?></p>
         <p class="text-center"><?php echo $donnees["auteur"]; ?></p>
