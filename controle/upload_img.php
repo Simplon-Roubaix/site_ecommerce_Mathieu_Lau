@@ -1,16 +1,9 @@
 <?php
-    function transfert(){
-      include('bdd.php');
+      include_once('../modele/data.php');
         $img_taille = $_FILES['img']['size'];
         $img_type = $_FILES['img']['type'];
         $img_nom  = $_FILES['img']['name'];
-        
-        $req =$bdd->prepare("INSERT INTO image (nom_img, poids, type) VALUES (:nom_img, :poids, :type)");
-        $req->execute(array(
-          'nom_img'=> $img_nom,
-          'poids'=>$img_taille,
-          'type'=>$img_type ));
-    }
+        envoie_img($img_nom, $img_taille, $img_type);
   //   if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0)
   // {
   //         if ($_FILES['img']['size'] <= 1000000)
@@ -28,7 +21,3 @@
   //         }
   // }
 ?>
-
-<?php
-    transfert();
-     ?>
