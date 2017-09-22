@@ -1,6 +1,6 @@
 <?php
     if(isset($_SESSION['pseudo'])){
-      echo '<form action="formulaire.php" method="POST">';
+      echo '<form action="../controle/formulaire.php" method="POST">';
       echo '<input type="submit" value="Publier un article">';
       echo '</form>';
     }

@@ -19,7 +19,7 @@ function get_img_articles_id($vartest){
 
   $reponse = $bdd->prepare('SELECT * FROM image i INNER JOIN articles a ON a.id_img = i.id and a.id = ?');
   $reponse->execute(array($vartest));
-  return $reponse->fetch();
+  return $reponse->fetchAll();
 }
 
 function envoie_enregistrement($pseudo, $password){
@@ -58,9 +58,8 @@ function envoie_article($donnees, $infos){
   $req->execute([$donnees['img_id'],$infos['nom'],$infos['description'], $infos['grosse_description']]);
 }
 
-function envoie_img(){
+function envoie_img($img_nom, $img_taille, $img_type){
   $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
-
   $req =$bdd->prepare("INSERT INTO image (nom_img, poids, type) VALUES (:nom_img, :poids, :type)");
   $req->execute(array(
     'nom_img'=> $img_nom,
