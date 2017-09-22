@@ -1,7 +1,3 @@
-<?php
-ob_start();
-session_start();
- ?>
 <!doctype html>
 <html class="no-js" lang="FR">
   <head>
@@ -53,6 +49,3 @@ else{
       }
       ?>
     </header>
-    <?php
-    ob_end_flush();
-     ?>

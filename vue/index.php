@@ -1,6 +1,6 @@
 <?php
     if(isset($_SESSION['pseudo'])){
-      echo '<form action="formulaire.php" method="POST">';
+      echo '<form action="../controle/formulaire.php" method="POST">';
       echo '<input type="submit" value="Publier un article">';
       echo '</form>';
     }
@@ -13,7 +13,7 @@
  foreach ($variable as $donnees) {
 ?>
        <form class="card my-4" action="../controle/descriptif.php" style="width: 20rem;" method="post">
-          <img class="card-img-top" src="img/<?php echo $donnees["nom_img"];?> ">
+          <img class="card-img-top" src="../img/<?php echo $donnees["nom_img"];?> ">
           <div class="card-block">
             <h4 class="card-title"><?php echo $donnees["nom"];?></h4>
             <p class="card-text"><?php echo $donnees["description"];?></p>
