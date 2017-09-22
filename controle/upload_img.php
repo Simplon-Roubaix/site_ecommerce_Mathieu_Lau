@@ -1,9 +1,8 @@
 <?php
-      include('../modele/data.php');
+      include_once('../modele/data.php');
         $img_taille = $_FILES['img']['size'];
         $img_type = $_FILES['img']['type'];
         $img_nom  = $_FILES['img']['name'];
-          var_dump($img_nom);
         envoie_img($img_nom, $img_taille, $img_type);
   //   if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0)
   // {
