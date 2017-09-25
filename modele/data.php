@@ -21,13 +21,15 @@ function get_img_articles_id($vartest){
   return $reponse->fetchAll();
 }
 
-function envoie_enregistrement($pseudo, $password){
+
+function envoie_enregistrement($pseudo, $password, $mail){
   $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
 
-  $req = $bdd->prepare('INSERT INTO Connexion (pseudo, password) VALUES(:pseudo, :password)');
+  $req = $bdd->prepare('INSERT INTO Connexion (pseudo, password, mail) VALUES(:pseudo, :password, :mail)');
   $req->execute(array(
      'pseudo' => $pseudo,
-     'password'=> $password
+     'password'=> $password,
+     'mail'=> $mail
      ));
 }
 
@@ -37,6 +39,16 @@ function comparaison_mdp($password, $pseudo){
 $req=$bdd->prepare('SELECT * FROM Connexion WHERE password=:password and pseudo=:pseudo');
 $req->execute(array(
   'password'=>$password,
+  'pseudo'=>$pseudo
+));
+return $req->fetch();
+}
+
+function comparaison_pseudo($pseudo){
+  $bdd = new PDO('mysql:host=localhost;dbname=LAU&MATH;charset=utf8', 'root', 'root');
+
+$req=$bdd->prepare('SELECT * FROM Connexion WHERE  pseudo=:pseudo');
+$req->execute(array(
   'pseudo'=>$pseudo
 ));
 return $req->fetch();
