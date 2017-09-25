@@ -5,20 +5,20 @@
     <title></title>
   </head>
   <body>
-    <form class=""action="../controle/enregistrement_post.php" method="post">
+    <form class="" action="../controle/enregistrement_post.php" method="post">
       <span><?php if(isset($_SESSION['erreur']["pseudo"])) {
         echo 'Votre pseudo est déjà pris, veuillez en choisir un autre';
       }?></span>
-    <input type="text" name="pseudo" placeholder="pseudo" value="">
+    <input type="text" name="pseudo" placeholder="pseudo" value=""><br>
     <span><?php if(isset($_SESSION['erreur']["password"])) {
       echo 'Votre mot de passe n\'est pas le meme';
     }?></span>
-    <input type="password" name="password" placeholder="password" value="">
-    <input type="password" name="password1" placeholder="reecrire le password" value="">
+    <input type="password" name="password" placeholder="password" value=""><br>
+    <input type="password" name="password1" placeholder="reecrire le password" value=""><br>
     <span><?php if(isset($_SESSION['erreur']["email"])) {
       echo 'L\'adresse ' . $_POST['mail'] . ' n\'est pas valide, recommencez !';
     }?></span>
-    <input type="text" name="mail" placeholder="email" value="">
+    <input type="text" name="mail" placeholder="email" value=""><br>
     <p><input type="submit" name=""value="S'inscrire"></p> </form>
 
   </body>
