@@ -167,7 +167,21 @@ i{
   width: 100%;
 }
 
+#inscription {
+  text-align: center;
+  line-height: 80px
+}
 
+#inscription a{
+  text-decoration: none;#D8#D8C9AD;C9AD;
+  color: #59514A;
+  background-color: #D8C9AD;
+}
+
+#inscription a:hover{
+  color: #D8C9AD;
+  background-color: #59514A;
+}
 
 
 /* ==========================================================================
