@@ -7,6 +7,8 @@
 </head>
 
 <body>
+      <div class="container" id="inscription">
+        <h1>Inscrivez-vous :</h1>
   <form class="" action="../controle/enregistrement_post.php" method="post">
 
     <input type="text" name="pseudo" placeholder="pseudo" value=""><br>
@@ -15,7 +17,7 @@
     }?></p>
 
 
-    <input type="password" name="password" placeholder="password" value=""><br>
+    <input type="password" name="password" placeholder="password" value=""><br><p></p>
     <input type="password" name="password1" placeholder="reecrire le password" value=""><br>
     <p><?php if(isset($_SESSION['erreur']["password"])) {
       echo 'Votre mot de passe n\'est pas le meme';
@@ -26,7 +28,7 @@
     }?></p>
     <p><input type="submit" name="" value="S'inscrire"></p>
   </form>
-
+</div>
 </body>
 
 </html>

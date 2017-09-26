@@ -19,8 +19,9 @@
 
     <div class="container" id="inscription">
       <h1>Créer un compte :</h1>
-      <a id="bouton" href="../controle/enregistrement.php"> S'inscrire </a>
-    </div>
+      <form class="" action="../controle/enregistrement.php" method="post">
+        <input type="submit" name="" value="inscription">    </div>
+      </form>
 
 
   </body>
