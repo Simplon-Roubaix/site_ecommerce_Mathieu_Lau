@@ -13,6 +13,9 @@
 // include('bdd.php');
 echo 'Bonjour '.$_SESSION['pseudo'];
 ?>
+<form class="" action="../controle/index.php" method="post">
+  <input type="submit" name="" value="retour">
+</form>
 
 <div class="container">
 <h1 class="text-center">Ajouter un article</h1>

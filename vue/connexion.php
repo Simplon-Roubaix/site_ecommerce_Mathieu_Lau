@@ -9,6 +9,9 @@
     <form class="" action="../controle/connexion_post.php" method="post">
       <input type="text" name="pseudo" value="" placeholder="pseudo">
       <input type="password" name="password" value="" placeholder="password">
+      <p><?php if(isset($_SESSION['erreur']["connexion"])) {
+          echo 'erreur de connexion';
+        }?></p>
       <input type="submit" name="" value="connexion">
     </form>
 

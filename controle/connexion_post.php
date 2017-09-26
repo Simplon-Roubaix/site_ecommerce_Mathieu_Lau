@@ -11,6 +11,7 @@ if ($password ==$donnees['password'] and $pseudo==$donnees['pseudo']){
   include'formulaire.php';
 }
 else{
- include'enregistrement.php';
+ $_SESSION['erreur']["connexion"]="erreur";
+ include'connexion.php';
 };
 ob_end_flush();
