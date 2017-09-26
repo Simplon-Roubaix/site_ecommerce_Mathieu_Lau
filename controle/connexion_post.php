@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 include('../modele/data.php');
-$pseudo=$_POST['pseudo'];
+$pseudo=strtolower($_POST['pseudo']);
 $pass=$_POST['password'];
 $password=sha1($pass);
 $donnees=comparaison_mdp($password,$pseudo);
@@ -11,6 +11,7 @@ if ($password ==$donnees['password'] and $pseudo==$donnees['pseudo']){
   include'formulaire.php';
 }
 else{
- include'enregistrement.php';
+ $_SESSION['erreur']["connexion"]="erreur";
+ include'connexion.php';
 };
 ob_end_flush();
